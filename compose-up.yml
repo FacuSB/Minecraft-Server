@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  mc:
+    image: itzg/minecraft-server
+    ports:
+      - 25565:25565
+    environment:
+      EULA: "TRUE"
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    ONLINE_MODE: false
+    DIFFICULTY: "hard"
+    SERVER_NAME: "SEXO"
+    MEMORY: "2G"
+    TYPE: "PUPUR"
+    ICON: "https://imgs.search.brave.com/iUnOwhcETlbf4juAO3LJs5oGRP_TOaa747IvxVyixAA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA1LzQ4Lzc0LzIx/LzM2MF9GXzU0ODc0/MjE1NF9qVTU4WG42/aWhFTlltWnFUNmo5/MHRPeVdyRnJ3YVdF/Yi5qcGc"
+  volumes:
+      - .data:/data
